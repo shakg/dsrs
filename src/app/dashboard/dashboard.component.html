@@ -1,0 +1,49 @@
+<div class="flex flex-col flex-wrap m-5 px-10 py-5">
+
+    <div class="flex flex-row items-center align-center mb-3">
+        <h1 class="font-bold text-3xl text-white mr-3">
+            Release Jobs
+        </h1>
+        <div class="px-4 py-2 border border-white rounded cursor-pointer hover:border-gray-400 hover:text-gray-300">
+            <p class="text-lg text-gray-200">
+                See all
+            </p>
+        </div>
+    </div>
+
+    <div class="flex flex-row overflow-y-scroll m-1 px-4 py-2" *ngFor="let releaseJob of releaseJobs">
+        <div class="flex flex-row px-4 py-2" >
+            <div class="flex flex-col px-4 py-2">
+                name : {{releaseJob.name}}
+            </div>
+            <div class="flex flex-col px-4 py-2">
+                project : {{releaseJob.project}}
+            </div>
+            <div class="flex flex-col px-4 py-2">
+                branch : {{releaseJob.branch}}
+            </div>
+            <div class="flex flex-col px-4 py-2">
+                start time : {{releaseJob.startTime}}
+            </div>
+            <div class="flex flex-col px-4 py-2">
+                time elapsed : {{releaseJob.timeElapsed}}
+            </div>
+            <div class="flex flex-col px-4 py-2">
+                status : {{releaseJob.status}}
+            </div>
+        </div>
+    </div>
+    <!--
+        list of cards about past release jobs
+    -->
+
+    <div class="flex flex-row items-center align-center mb-3">
+        <h1 class="font-bold text-3xl text-white mr-3">
+            Statistics
+        </h1>
+    </div>
+    <div class="bg-gray-700 w-full rounded px-4 py-4">
+        <p class="text-3xl text-gray-200">Coming soon!</p>
+    </div>
+
+</div>
