@@ -7,5 +7,39 @@
             <img src="assets/icons/add.svg" alt="" srcset="">
         </div>
     </div>
+
+    <div class="flex flex-col overflow-y-scroll mb-5">
+        <div class="flex flex-col px-4 py-2 mb-2 bg-gray-900 rounded shadow-xl" *ngFor="let releaseJob of releaseJobs">
+            <div class="flex flex-row px-4 py-2">
+                <b class="mr-5">{{releaseJob.name}}</b> 
+                release type: 
+                <b>{{releaseJob.releaseType}}</b> 
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>project : </b>{{releaseJob.project}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>branch : </b>{{releaseJob.branch}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>prep script : </b>{{releaseJob.prepScript}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>build command : </b>{{releaseJob.buildCommand}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>version number strategy : </b>{{releaseJob.versionNumberStrategy}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>web hook url : </b>{{releaseJob.webHookUrl}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>target location for windows : </b>{{releaseJob.targetLocationForWindows}}
+            </div>
+            <div class="flex flex-row px-4 py-2">
+                <b>target location for linux: </b>{{releaseJob.targetLocationForLinux}}
+            </div>
+        </div>
+    </div>
     
 </div>

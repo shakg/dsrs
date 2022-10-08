@@ -11,25 +11,25 @@
         </div>
     </div>
 
-    <div class="flex flex-row overflow-y-scroll m-1 px-4 py-2">
-        <div class="flex flex-row px-4 py-2" *ngFor="let releaseJob of releaseJobs">
-            <div class="flex flex-col px-4 py-2">
-                name : {{releaseJob.name}}
+    <div class="flex flex-col overflow-y-scroll mb-5">
+        <div class="flex flex-col px-4 py-2 mb-2 bg-gray-900 rounded shadow-xl" *ngFor="let releaseJob of releaseJobs">
+            <div class="flex flex-row px-4 py-2">
+                <b>name : </b> {{releaseJob.name}}
             </div>
-            <div class="flex flex-col px-4 py-2">
-                project : {{releaseJob.project}}
+            <div class="flex flex-row px-4 py-2">
+                <b>project : </b>{{releaseJob.project}}
             </div>
-            <div class="flex flex-col px-4 py-2">
-                branch : {{releaseJob.branch}}
+            <div class="flex flex-row px-4 py-2">
+                <b>branch : </b>{{releaseJob.branch}}
             </div>
-            <div class="flex flex-col px-4 py-2">
-                start time : {{releaseJob.startTime}}
+            <div class="flex flex-row px-4 py-2">
+                <b>start time : </b>{{releaseJob.startTime}}
             </div>
-            <div class="flex flex-col px-4 py-2">
-                time elapsed : {{releaseJob.timeElapsed}}
+            <div class="flex flex-row px-4 py-2">
+                <b>time elapsed : </b>{{releaseJob.timeElapsed}}
             </div>
-            <div class="flex flex-col px-4 py-2">
-                status : {{releaseJob.status}}
+            <div class="flex flex-row px-4 py-2">
+                <b>status : </b>{{releaseJob.status}}
             </div>
         </div>
     </div>

@@ -21,9 +21,16 @@ export class DashboardComponent implements OnInit {
       timeElapsed : "3 minutes 12 seconds",
       status : "running"
     }
+    const _a = <ReleaseJob>{
+      name: "Deli GCS",
+      project: "deli-autopilot-software",
+      branch : "development",
+      startTime : "08.10.2022 | 21:13",
+      timeElapsed : "3 minutes 12 seconds",
+      status : "done"
+    }
     this.releaseJobs.push(_)
-    console.log(this.releaseJobs);
-    
+    this.releaseJobs.push(_a)
   }
 
 }
