@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AddNewJobComponent } from './settings/add-new-job/add-new-job.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SettingsComponent
+    SettingsComponent,
+    AddNewJobComponent,
   ],
   imports: [
     BrowserModule,

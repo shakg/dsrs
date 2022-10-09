@@ -1,0 +1,71 @@
+<div class="flex flex-col p-10">
+    <div class="flex flex-row m-2 px-4 py-2 rounded text-white cursor-pointer hover:text-gray-300"
+        [routerLink]="['/settings']">
+        <p class="mr-2">
+            < </p>
+                <p>
+                    Settings
+                </p>
+    </div>
+    <p class="font-bold text-3xl p-4">
+        Add new job
+    </p>
+
+    <div class="px-4 py-2 mx-4 mb-2 text-white text-md rounded border border-white">
+        You need to give webhook url to gitlab. When you complete commands and additional info, the TRS will give you a
+        webhook url to configure gitlab.
+        <br> ! Note : Specified branch name and configure gitlab web hook branch must be the same.
+    </div>
+
+    <div class="flex flex-col form-control p-5">
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Project Name </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Release Type </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Project URL </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Branch Name </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Prep Script Location </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Build Command </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Version Number Strategy </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Target Binary Location for Windows </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+        <div class="flex flex-row align-center justify-center items-center mb-2">
+            <label for="projectName" class="font-bold text-xl w-1/4">Target Binary Location for Linux </label>
+            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+        </div>
+    </div>
+
+    <div class="flex flex-row mx-4 px-4 py-2 items-center justify-center cursor-pointer bg-green-400 rounded text-white hover:bg-green-300"
+        (click)="saveReleaseJob()">
+        <img src="assets/icons/save.svg" class="mr-2" alt="">
+        <p class="font-bold text-xl">Save</p>
+    </div>
+
+    <code class="flex flex-row justify-center items-center px-4 py-3 mx-4 mt-2 rounded bg-gray-600 text-white transition-all" *ngIf="saved">
+        Succesfully saved release Job!
+        Your gitlab web hook url is 
+        http://10.30.50.41:4848/deli-gcs/release
+        <img src="assets/icons/save.svg" class="ml-2" alt="">
+    </code>
+</div>

@@ -38,8 +38,10 @@ export class SettingsComponent implements OnInit {
     }
     this.releaseJobs.push(_)
     this.releaseJobs.push(_a)
-    console.log(this.releaseJobs);
+    
     
   }
 
+  addNewJob(){
+  }
 }
