@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GatewayService } from 'src/app/gateway.service';
+import { ReleaseJob } from 'src/app/types/ReleaseJob';
 
 @Component({
   selector: 'app-add-new-job',
@@ -8,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class AddNewJobComponent implements OnInit {
 
   saved:boolean = false;
-  constructor() { }
+  toSave:ReleaseJob = <ReleaseJob>{};
+  constructor(private gateway:GatewayService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +22,12 @@ export class AddNewJobComponent implements OnInit {
     setTimeout(()=>{
       this.saved = false;
     }, 3000)
-  }
 
+    this.gateway.saveReleaseJob(this.toSave).subscribe((_serverResponse:any)=>{
+      console.log(_serverResponse);
+    })
+    
+    // return to settings page
+    this.router.navigate(['/settings']);
+  }
 }

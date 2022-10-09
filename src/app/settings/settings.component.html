@@ -1,4 +1,4 @@
-<div class="flex flex-col flex-no-wrap mx-4 my-2 px-4 py-2">
+<div class="flex flex-col flex-no-wrap mx-4 my-2 px-4 py-2 h-full">
     <div class="flex flex-row items-center justify-center">
         <h1 class="text-3xl font-bold px-4 py-2 mr-3">
             Configure & See Release Jobs
@@ -8,8 +8,8 @@
         </div>
     </div>
 
-    <div class="flex flex-col overflow-y-scroll mb-5">
-        <div class="flex flex-col px-4 py-2 mb-2 bg-gray-900 rounded shadow-xl" *ngFor="let releaseJob of releaseJobs">
+    <div class="flex flex-col lg:flex-row lg:gap-2 mb-5">
+        <div class="flex flex-col w-full lg:w-1/2 px-4 py-2 mb-2 bg-gray-900 rounded shadow-xl" *ngFor="let releaseJob of releaseJobs">
             <div class="flex flex-row px-4 py-2">
                 <b class="mr-5">{{releaseJob.name}}</b> 
                 release type: 

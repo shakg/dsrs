@@ -1,4 +1,4 @@
-<div class="flex flex-col p-10">
+<div class="flex flex-col p-10 overflow-auto w-full h-full">
     <div class="flex flex-row m-2 px-4 py-2 rounded text-white cursor-pointer hover:text-gray-300"
         [routerLink]="['/settings']">
         <p class="mr-2">
@@ -19,40 +19,40 @@
 
     <div class="flex flex-col form-control p-5">
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Project Name </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="projectName" class="font-bold text-md lg:text-xl w-1/4">Project Name </label>
+            <input type="text" name="projectName" [(ngModel)]="toSave.name" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Release Type </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="releaseType" class="font-bold text-md lg:text-xl w-1/4">Release Type </label>
+            <input type="text" name="releaseType" [(ngModel)]="toSave.releaseType" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Project URL </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="projectURL" class="font-bold text-md lg:text-xl w-1/4">Project URL </label>
+            <input type="text" name="projectURL" [(ngModel)]="toSave.project" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Branch Name </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="branchName" class="font-bold text-md lg:text-xl w-1/4">Branch Name </label>
+            <input type="text" name="branchName" [(ngModel)]="toSave.branch" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Prep Script Location </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="prepScript" class="font-bold text-md lg:text-xl w-1/4">Prep Script Location </label>
+            <input type="text" name="prepScript" [(ngModel)]="toSave.prepScript" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Build Command </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="buildCommand" class="font-bold text-md lg:text-xl w-1/4">Build Command </label>
+            <input type="text" name="buildCommand" [(ngModel)]="toSave.buildCommand" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Version Number Strategy </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="versionNumberStrategy" class="font-bold text-md lg:text-xl w-1/4">Version Number Strategy </label>
+            <input type="text" name="versionNumberStrategy" [(ngModel)]="toSave.versionNumberStrategy" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Target Binary Location for Windows </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="targetLocationWindows" class="font-bold text-md lg:text-xl w-1/4">Target Binary Location for Windows </label>
+            <input type="text" name="targetLocationWindows" [(ngModel)]="toSave.targetLocationForWindows" class="p-2 rounded w-3/4 text-black" id="">
         </div>
         <div class="flex flex-row align-center justify-center items-center mb-2">
-            <label for="projectName" class="font-bold text-xl w-1/4">Target Binary Location for Linux </label>
-            <input type="text" name="projectName" class="p-2 rounded w-3/4" id="">
+            <label for="targetLocationLinux" class="font-bold text-md lg:text-xl w-1/4">Target Binary Location for Linux </label>
+            <input type="text" name="targetLocationLinux" [(ngModel)]="toSave.targetLocationForLinux" class="p-2 rounded w-3/4 text-black" id="">
         </div>
     </div>
 
