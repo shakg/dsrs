@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AddNewJobComponent } from './settings/add-new-job/add-new-job.component';
 import { FormsModule } from '@angular/forms';
+import { DsrsSettingsComponent } from './settings/dsrs-settings/dsrs-settings.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     SettingsComponent,
     AddNewJobComponent,
+    DsrsSettingsComponent,
   ],
   imports: [
     BrowserModule,
