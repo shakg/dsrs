@@ -1,5 +1,5 @@
 <div class="flex flex-col flex-no-wrap mx-4 my-2 px-4 py-2 h-full">
-    <div class="flex flex-row items-center justify-center">
+    <div class="flex flex-row items-center ">
         <h1 class="text-3xl font-bold px-4 py-2 mr-3">
             Configure & See Release Jobs
         </h1>
@@ -9,6 +9,9 @@
     </div>
 
     <div class="flex flex-col lg:flex-row lg:gap-2 mb-5">
+        <div class="flex text-xl font-light p-5 border border-red-400 rounded w-full m-4" *ngIf="releaseJobs.length < 1">
+            Whoops! You haven't configured any jobs. 
+        </div>
         <div class="flex flex-col w-full lg:w-1/2 px-4 py-2 mb-2 bg-gray-900 rounded shadow-xl" *ngFor="let releaseJob of releaseJobs">
             <div class="flex flex-row px-4 py-2">
                 <b class="mr-5">{{releaseJob.name}}</b> 
@@ -41,5 +44,11 @@
             </div>
         </div>
     </div>
+
+    <div class="mx-4 my-2 bg-gray-600 opacity-30 h-1">
+
+    </div>
+
+    <app-dsrs-settings></app-dsrs-settings>
 </div>
 
