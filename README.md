@@ -11,5 +11,14 @@ Because I believe just to get your binary/executable/packaged application, you d
  - Configure location of release folder in DSRS settings.
  and thats it. Now you can see automatically published binary/executable/packaged applications in releases page. Based on your configuration, when a webhook triggers, your DSRS will run. 
  
- 
- 
+# How to setup development env
+ - Clone the repo `git clone <repo-url>`
+ - Navigate to repo folder & `npm install`
+ - İnstall angular cli globally `npm install -g @angular/cli`
+ - Install express `npm install express`
+ - run `ng serve` or `npm run start` to start frontend in watch mode aka angular serve mode
+ - run `node server/index.js` to start backend :point_right: requires express to be installed. 
+and thats it, you are good to go.
+
+# How to contribute
+DSRS repo and it's maintainers use conventional commit metodology when commiting. 
